@@ -1,6 +1,6 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
-// import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { IPropsTask } from '../interfaces/IPropsTask';
 
 export function Task(props: IPropsTask) {
@@ -11,8 +11,8 @@ export function Task(props: IPropsTask) {
                 <label htmlFor={props.task.id}>{props.task.title}</label>
             </div>
             <div>
-                {/* <FontAwesomeIcon className='icon' icon={faPenToSquare} onClick={() => props.editTask(props.task.id)} /> */}
-                {/* <FontAwesomeIcon className='icon' icon={faTrash} onClick={() => props.deleteTodo(props.task.id)} /> */}
+                <FontAwesomeIcon className='icon' icon={faPenToSquare} onClick={() => props.editTask(props.task.id)} />
+                <FontAwesomeIcon className='icon' icon={faTrash} onClick={() => props.deleteTodo(props.task.id)} />
             </div>
         </li>
     );

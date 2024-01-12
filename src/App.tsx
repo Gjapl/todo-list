@@ -25,13 +25,13 @@ export default function App() {
     });
   }
 
-  function deleteTodo(id: any) {
+  function deleteTodo(id: string) {
     setTodoList(currentTodoList => {
       return currentTodoList.filter(todo => todo.id !== id);
     })
   }
 
-  function editTask(id: any) {
+  function editTask(id: string) {
     setTodoList((currentTodoList): ITask[] => {
       return currentTodoList.map(todo => {
         if (todo.id === id) {
@@ -44,7 +44,7 @@ export default function App() {
     })
   }
 
-  function toggleTodo(id: any, finished: boolean) {
+  function toggleTodo(id: string, finished: boolean) {
     setTodoList((currentTodoList): ITask[] => {
       return currentTodoList.map(todo => {
         if (todo.id === id) {
@@ -57,7 +57,7 @@ export default function App() {
     });
   }
 
-  function updateTask(title: string, id: any) {
+  function updateTask(title: string, id: string) {
     setTodoList((currentTodoList): ITask[] => {
       return currentTodoList.map(todo => {
         if (todo.id === id) {

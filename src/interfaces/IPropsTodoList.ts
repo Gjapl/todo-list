@@ -2,8 +2,8 @@ import { ITask } from "./ITask";
 
 export default interface IPropsTodoList {
     todos: ITask[],
-    deleteTodo: Function,
-    toggleTodo: Function,
-    updateTask: Function,
-    editTask: Function
+    deleteTodo: (id: string) => void;
+    toggleTodo: (id: string, finished: boolean) => void;
+    updateTask: (title: string, id: string) => void;
+    editTask: (id: string) => void;
 }

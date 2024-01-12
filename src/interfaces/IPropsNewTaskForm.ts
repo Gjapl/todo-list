@@ -1,3 +1,3 @@
 export default interface IPropsNewTaskForm {
-    addTask: Function
+    addTask: (title: string) => void;
 }
